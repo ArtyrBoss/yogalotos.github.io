@@ -1,0 +1,93 @@
+.yoga-membership__price {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.yoga-membership__price-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  width: 283px;
+
+  margin-top: 5px;
+  margin-right: 5px;
+  padding-left: 30px;
+  padding-top: 30px;
+
+  background-color: #ffffff;
+  border: 5px solid transparent;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/button.png");
+    height: 40px;
+    width: 40px;
+    top: 40px;
+    right: 10px;
+  }
+
+  &:hover:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/button-hover.png");
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.yoga-membership__cost {
+  margin-top: 10px;
+}
+
+.yoga-membership__cost--value {
+  font-size: 20px;
+  color: #f97a85;
+}
+
+.yoga-membership__btn-order {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: $tablet_width) {
+  .yoga-membership__table-and-pic-wrapper {
+    margin-left: -16px;
+  }
+
+  .yoga-membership__pictures {
+    display: none;
+  }
+}
+@media screen and (min-width: $tablet_width) {
+  .yoga-membership__pictures {
+    position: absolute;
+    z-index: 0;
+    top: 180px;
+    left: 420px;
+  }
+
+  .yoga-membership__btn-order {
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_lg_width) {
+  .yoga-membership__table-and-pic-wrapper {
+    margin-top: 50px;
+    margin-left: -140px;
+  }
+
+  .yoga-membership__pictures {
+    position: relative;
+    top: 50px;
+    left: -50px;
+  }
+
+  .yoga-membership .wrapper-block-number-and-button-scroll {
+    margin-left: 95px;
+  }
+}

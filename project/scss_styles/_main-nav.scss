@@ -1,0 +1,150 @@
+.popup-menu-btn {
+  content: "";
+  position: relative;
+  color: #fbf5f4;
+
+  width: 24px;
+  height: 16px;
+
+  padding-bottom: 4px;
+  margin-top: 5px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/burger.svg");
+}
+
+.popup-menu-btn__text {
+  display: none;
+}
+
+.main-nav {
+  display: none;
+  background-color: rgba(251, 245, 244, 1);
+
+  margin-top: -5px;
+
+  box-shadow: 0px 0px 5px 2px #772D00;
+  border-radius: 0 25px 25px 0;
+  z-index: 5;
+}
+
+.main-nav--toggle {
+  position: absolute;
+  border: none;
+  left: 0;
+  top: 45%;
+  background-color: transparent;
+}
+
+.main-nav--toggle::after {
+  content: "\2715";
+  position: absolute;
+  font-size: 23px;
+  color: #ea700e;
+
+  left: 22px;
+  top: 45%;
+  padding-top: -3px;
+
+  border-radius: 30px;
+  box-shadow: 5px 0 5px 1px rgba(157, 49, 14,1);
+  background-color: transparent;
+  //background-image: url("../img/close_pop_up.svg");
+  width: 29px;
+  height: 28px;
+  z-index: 5;
+}
+
+.main-nav__item a {
+  color: #524e4c;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .popup-menu-btn {
+    padding-left: 5px;
+    padding-right: 10px;
+
+  }
+
+  .main-nav {
+    position: fixed;
+
+    font-size: 24px;
+    text-align: center;
+
+    width: 90%;
+    max-width: 430px;
+    height: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+   // margin-top: -28px;
+    //margin-left: -25px;
+    padding-top: 100px;
+
+    border-radius: 25px;
+    background-color: rgba(251, 245, 244, 0.97);
+
+  }
+
+  .main-nav__list {
+    margin-top: -70px;
+  }
+
+  .main-nav__item {
+    padding-top: 35px;
+  }
+}
+
+@media screen and (min-width: 599px) {
+  .main-nav {
+    width: 180px;
+    height: 300px;
+    font-size: 18px;
+    position: absolute;
+    z-index: 5;
+    opacity: 0.98;
+    box-shadow: 5px 0px 5px -1px #772D00;
+
+  }
+
+  .main-nav__item {
+    color: #363433;
+    padding-top: 5px;
+
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+
+  .main-nav--toggle{
+    display: none;
+    left: 0;
+    top: -30px;
+  }
+
+  .main-nav__item:hover  {
+    transition-duration: 0.2s;
+
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .popup-menu-btn {
+    margin-top: 10px;
+  }
+
+  .popup-menu-btn__text {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: -7px;
+  }
+}

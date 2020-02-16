@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="../bootstrap/bootstrap-reboot.css" rel="stylesheet">
+  <link href="../bootstrap/bootstrap-grid.css" rel="stylesheet">
+  <link rel="preload" href="../fonts/Geometria-Light.woff2" as="font" crossorigin="anonymous">
+  <link href="../css/styles.css" rel="stylesheet">
+
+  <script src="../js/vue.js"></script>
+
+  <title>Lotos</title>
+</head>
+<body>
+<div id="vue-app">
+
+  <!-- Первый блок -->
+  <header id="main-header" class="main-header">
+
+    <div class="container-fluid">
+
+      <button class="main-nav__popup-btn popup-menu-btn">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+
+
+      <h2 class="header-title">Добро пожаловать</h2>
+
+      <main-nav></main-nav>
+
+      <h1 class="visually-hidden">Центр йоги Lotos</h1>
+
+      <div class="d-flex flex-column align-items-center flex-md-row-reverse mr-md-n4 flex-lg-row align-items-lg-start">
+        <picture class="main-header__pictures">
+          <source media="(min-width: 1530px)" data-srcset="../img/01-block.main-header_1080px.png">
+          <source media="(min-width: 768px)" data-srcset="../img/01-block.main-header_768px.png">
+          <img class="lazy main-header__picture mt-lg-n1" data-src="../img/01-block.main-header_375px.png" alt="Картинка Йогини" draggable="false">
+        </picture>
+
+        <div class="wrapper-title-and-invitation__main-header align-self-lg-center">
+          <img class="lazy main-header__title " data-src="../img/lotos-name.svg" width="335" height="107" alt="Картинка с именем центра йоги">
+
+          <p class="main-header__invitation ">
+            Приглашаем вас и ваших друзей<br>
+            на бесплатное пробное занятие </p>
+        </div>
+      </div>
+
+      <block-number-and-button-scroll></block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </header>
+
+  <!-- Второй блок -->
+  <section id="yoga-description" class="yoga-description">
+
+    <div class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Направление и классы</h2>
+
+      <main-nav></main-nav>
+
+      <h2 class="visually-hidden">Йога для начинающих</h2>
+
+      <div class="yoga-description__all-info-wrapper d-flex flex-lg-row-reverse justify-content-lg-center justify-content-xl-end no-gutters">
+
+        <div class="yoga-description__title-text-offer-wrapper col-md-8 col-lg-4 no-gutters">
+
+          <div class="yoga-description__main-title-wrapper d-flex flex-column col-7 col-md-4">
+            <strong class="yoga-description__main-first-half-title">Yoga</strong>
+            <span class="yoga-description__main-second-half-title">Для начинающих</span>
+          </div>
+
+          <div class="col-12">
+            <p class="yoga-description__text">
+              Йога для начинающих рассчитана на тех, кто
+              до этого никогда ей не занимался и требует
+              обучения. Такой программный комплекс
+              существует и в нашем центре.</p>
+
+            <p class="yoga-description__our-offer">
+              Мы предлагаем посетить бесплатное вводное занятие,
+              чтобы узнать, почему так много людей занимаются
+              йогой и придерживаются здорового образа жизни.</p>
+
+            <button class="yoga-description__btn-sign-up common-button" type="button">Записаться онлайн</button>
+          </div>
+        </div>
+
+        <div class="yoga-description__title-yoga-type-pic-wrapper d-md-flex col-md-4 no-gutters
+                 flex-md-column align-items-md-start col-lg-5 flex-lg-row justify-content-lg-between">
+
+          <ul class="yoga-description__yoga-type col-md-3 align-self-lg-start">
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Для начинающих">Для начинающих</li>
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Аштанга Виньяса">Аштанга Виньяса</li>
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Универсальная">Универсальная</li>
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Кундалини">Кундалини</li>
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Айенгара">Айенгара</li>
+            <li class="yoga-description__yoga-item common-hover-before" yogaID="Терапия">Терапия</li>
+          </ul>
+
+          <picture class="yoga-description__set-of-pictures">
+            <source media="(min-width: 1530px)" data-srcset="../img/02-block.yoga-description_1080px.png">
+            <img class="lazy yoga-description__picture " data-src="../img/02-block.yoga-description_768px.png" alt="Картинка Йогини" draggable="false">
+          </picture>
+        </div>
+      </div>
+
+      <block-number-and-button-scroll>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">02</span>
+      </block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </section>
+
+  <!-- Третий блок -->
+  <section class="discount">
+
+    <div  class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Пробное занятие</h2>
+
+      <main-nav></main-nav>
+
+      <div class="d-flex flex-lg-row-reverse justify-content-lg-end align-items-lg-center">
+
+        <div class="discount__wrapper d-flex flex-column align-items-center align-items-md-start col-12 col-8 col-md-8 col-lg-4">
+          <h2 class="discount__title"><strong class="discount__title--value">10%</strong> скидка<br> на абонемент</h2>
+          <p class="discount__description">Мы сделаем для вас 10% скидку
+            на абонемент, купленный в день посещения вводного занятия.</p>
+
+          <form class="discount__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="discount__label-name">
+              <input type="text" name="user-name" placeholder="Ваше имя">
+            </label>
+            <br>
+            <label class="discount__label-phone">
+              <input type="tel" name="user-phone" placeholder="Ваш телефон">
+            </label>
+            <br>
+            <button class="discount__btn-send-form common-button" type="submit">Отправить заявку</button>
+          </form>
+          <p class="discount__text-notice">Нажимая «Отправить заявку», вы даете <span>согласие</span> на обработку своих персональных данных</p>
+        </div>
+
+        <div class="discount__pictures-wrapper align-self-end col-md-4 col-lg-4">
+          <picture class="discount__set-of-pictures">
+            <source media="(min-width: 1100px)" data-srcset="../img/03-block.discount_1080px.png">
+            <img class="lazy discount__picture" data-src="../img/03-block.discount_768px.png" alt="Картинка Йогини" draggable="false">
+          </picture>
+        </div>
+
+      </div>
+
+      <block-number-and-button-scroll>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">03</span>
+      </block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </section>
+
+  <!-- Четвертый блок -->
+  <section id="our-instructor" class="our-instructor">
+
+    <div class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Преподаватели</h2>
+
+      <main-nav></main-nav>
+
+      <div class="our-instructor__wrapper row flex-md-row-reverse flex-lg-row justify-content-lg-start">
+        <div class="our-instructor__yoga-teacher-and-pic-wrapper d-flex flex-md-column-reverse col-md-4 align-items-md-start flex-lg-row-reverse col-lg-5 align-items-lg-start">
+          <picture class="our-instructor__set-of-pictures">
+            <source media="(min-width: 1530px)" data-srcset="../img/04-block.our-instructor_1080px.png">
+            <source media="(min-width: 768px)" data-srcset="../img/04-block.our-instructor_768px.png">
+            <img class="lazy our-instructor__picture" data-src="../img/04-block.our-instructor_375px.png" alt="Фото преподавателя йоги" draggable="false">
+          </picture>
+
+          <ul class="our-instructor__teacher-list col-md-4">
+            <li class="our-instructor__teacher-item common-hover-before" teacherID="Максим Казаков">Максим Казаков</li>
+            <li class="our-instructor__teacher-item common-hover-before" teacherID="Настя Антипова">Настя Антипова</li>
+            <li class="our-instructor__teacher-item common-hover-before" teacherID="Катя Стреженова">Катя Стреженова</li>
+            <li class="our-instructor__teacher-item common-hover-before" teacherID="Мария Жукова">Мария Жукова</li>
+            <li class="our-instructor__teacher-item common-hover-before" teacherID="Сергей Кириев">Сергей Кириев</li>
+          </ul>
+        </div>
+
+        <div class="our-instructor__wrapper-experience d-flex flex-column col-12 col-md-7 col-lg-4">
+          <strong class="our-instructor__name ">Максим Казаков</strong>
+          <div style="" class="">
+            <p class="our-instructor__experience">Преподаватель йоги с 1997 года</p>
+            <p class="our-instructor__experience">Занимается йогой Айенгара с 1990 года.
+              Является преподавателем йоги Айенгара с 1997 года. Имеет международный
+              сертификат Junior I. Проводит семинары, занятия разных уровней сложностей.</p>
+            <p class="our-instructor__experience">В йогу привел интерес. Является одним из
+              самых опытных преподавателей и опорой нашего центра. Все студенты любят Максима
+              за отзывчивость и индивидуальный подход к каждому.</p>
+          </div>
+
+          <button class="our-instructor__btn-sign-up common-button" type="button">Записаться к тренеру</button>
+        </div>
+
+      </div>
+
+      <block-number-and-button-scroll>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">04</span>
+      </block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </section>
+
+  <!-- Пятый блок -->
+  <section id="yoga-membership" class="yoga-membership">
+
+    <div class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Абонементы</h2>
+
+      <main-nav></main-nav>
+
+      <div class="yoga-membership__table-and-pic-wrapper d-flex flex-md-column flex-lg-row-reverse justify-content-lg-center">
+        <div class="col-4 col-lg-4">
+          <table class="yoga-membership__price d-flex">
+            <tbody>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">Разовое занятие</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">300</b> руб.</td>
+            </tr>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">Месяц занятий</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">2 000</b> руб.</td>
+            </tr>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">Пол года занятий</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">8 000</b> руб.</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">3 месяца занятий</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">4 500</b> руб.</td>
+            </tr>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">2 месяца занятий</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">3 500</b> руб.</td>
+            </tr>
+            <tr class="yoga-membership__price-item">
+              <td class="yoga-membership__period">Год занятий</td>
+              <td class="yoga-membership__cost"><b class="yoga-membership__cost--value">14 000</b> руб.</td>
+            </tr>
+            </tbody>
+          </table>
+          <button class="yoga-membership__btn-order common-button" type="button">Заказать абонемент</button>
+        </div>
+
+        <picture class="yoga-membership__pictures col-lg-4">
+          <source media="(min-width: 1530px)" data-srcset="../img/05-block.yoga-membership_1080px.png">
+          <img class="lazy yoga-membership__picture" data-src="../img/05-block.yoga-membership_768px.png" alt="Картинка Йогини" draggable="false">
+        </picture>
+      </div>
+        <block-number-and-button-scroll>
+          <span ref="block_Number" class="block-number__first-elem align-self-xl-end">05</span>
+        </block-number-and-button-scroll>
+        <social-media></social-media>
+
+
+    </div>
+  </section>
+
+  <!-- Шестой блок -->
+  <section id="schedule" class="schedule">
+
+    <div class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Расписание</h2>
+
+      <main-nav></main-nav>
+
+      <table class="schedule__table-of-all-info">
+        <tr class="schedule__period">
+          <th class="schedule__downland-schedule"><a href="../yoga-schedule-list/schedule-file.docx" download="Расписание занятий">Скачать<br>расписание</a> </th>
+          <th class="schedule__time">08:00-09:25</th>
+          <th class="schedule__time">09:30-10:55</th>
+          <th class="schedule__time">11:00-12:25</th>
+          <th class="schedule__time">13:30-14:45</th>
+          <th class="schedule__time">15:00-16:25</th>
+          <th class="schedule__time">17:00-18:25</th>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Понедельник</th>
+          <td class="schedule__data">Йога для начинающих</td>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+          <td class="schedule__data">Кундалини йога</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Вторник</th>
+          <td class="schedule__data">Кундалини йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога для начинающих</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Среда</th>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога для начинающих</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Кундалини йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Четверг</th>
+          <td class="schedule__data">Йога для начинающих</td>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+          <td class="schedule__data">Кундалини йога</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Пятница</th>
+          <td class="schedule__data">Кундалини йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога для начинающих</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Суббота</th>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога для начинающих</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Кундалини йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+        </tr>
+        <tr class="schedule__period">
+          <th class="schedule__day">Воскресенье</th>
+          <td class="schedule__data">Йога для начинающих</td>
+          <td class="schedule__data">Универсальная йога</td>
+          <td class="schedule__data">Йога Айенгара</td>
+          <td class="schedule__data">Аштанга Виньяса йога</td>
+          <td class="schedule__data">Йогатерапия</td>
+          <td class="schedule__data">Кундалини йога</td>
+        </tr>
+      </table>
+
+      <block-number-and-button-scroll>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">06</span>
+      </block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </section>
+
+  <!-- Седьмой блок -->
+  <section id="feedback" class="feedback">
+
+    <button class="popup-menu-btn ">
+      <span class="visually-hidden">Открыть меню</span>
+      <span class="popup-menu-btn__text">Меню</span>
+    </button>
+
+    <lotos-logo-phone></lotos-logo-phone>
+
+    <h2 class="header-title">Отзывы</h2>
+
+    <main-nav></main-nav>
+
+    <div class="container-fluid">
+
+      <div class="feedback__wrapper d-md-flex flex-md-row flex-md-wrap justify-content-center order-lg-2 justify-content-lg-start no-gutters">
+
+        <div class="feedback__user-info user-info d-md-flex flex-md-column col-md-8 col-lg-4 order-lg-1">
+
+          <div class="user-info__wrapper-photo-name-age d-md-flex">
+            <img class="lazy user-info__photo" data-src="../img/07-block.user-photo_for-all-px.jpg" alt="Фото пользователя" width="160" height="160">
+
+            <div class="user-info__wrapper-name-age align-self-md-end">
+              <span class="user-info__name">Арина Наумова</span>
+              <br>
+              <span class="user-info__age">34 года</span>
+            </div>
+          </div>
+
+          <div class="user-info__comment-wrapper">
+            <label class="user-info__btn-show-full-comment" for="button">Читать полностью</label>
+            <input type="checkbox" id="button">
+
+            <p class="user-info__user-comment">Не знаю, как остальные, но после занятий йогой
+              хочется начать новую здоровую жизнь, хочется поесть овощей и фруктов и поднять
+              свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.
+              <br><br>
+              После упорных занятий я стала меньше болеть, и поняла,
+              в чем смысл всех упражнений. Позы получаются элегантно,
+              и не больно только тогда, когда не прилагаешь усилия,
+              а остаёшься расслабленным на протяжении всего урока.
+            </p>
+          </div>
+          <button class="feedback__btn-sign-up common-button" type="button">Попробовать тоже</button>
+        </div>
+
+        <ul class="user-info__user-comment-list col-md-3 col-lg-2">
+          <li class="user-info__user-comment-item" userID="Жанна Блиц">Жанна Блиц</li>
+          <li class="user-info__user-comment-item" userID="Арина Наумова">Арина Наумова</li>
+          <li class="user-info__user-comment-item" userID="Виталий Коробко">Виталий Коробко</li>
+          <li class="user-info__user-comment-item" userID="Елена Снежная">Елена Снежная</li>
+          <li class="user-info__user-comment-item" userID="Юлиана Ветрова">Юлиана Ветрова</li>
+        </ul>
+
+        <picture class="user-info__set-of-pictures col-lg-4">
+          <source media="(min-width: 1530px)" data-srcset="../img/07-block.feedback_1080px.png">
+          <img class="lazy user-info__picture" data-src="../img/07-block.feedback_768px.png" alt="Фото преподавателя йоги" draggable="false">
+        </picture>
+
+      </div>
+    </div>
+
+    <block-number-and-button-scroll>
+      <span ref="block_Number" class="block-number__first-elem align-self-xl-end">07</span>
+    </block-number-and-button-scroll>
+    <social-media></social-media>
+
+  </section>
+
+  <!-- Восьмой блок -->
+  <section class="discount">
+
+    <div class="container-fluid">
+
+      <button class="popup-menu-btn ">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="popup-menu-btn__text">Меню</span>
+      </button>
+
+      <lotos-logo-phone></lotos-logo-phone>
+
+      <h2 class="header-title">Пробное занятие</h2>
+
+      <main-nav></main-nav>
+
+      <div class="d-flex flex-lg-row-reverse justify-content-lg-end align-items-lg-center">
+
+        <div class="discount__wrapper d-flex flex-column align-items-center align-items-md-start col-12 col-8 col-md-8 col-lg-4">
+          <h2 class="discount__title"><strong class="discount__title--value">10%</strong> скидка<br> на абонемент</h2>
+          <p class="discount__description">Хотите скидку на абонемент? Приведите с
+            собой друзей и получите -10% за каждого пришедшего</p>
+
+          <form class="discount__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="discount__label-name">
+              <input type="text" name="user-name" placeholder="Ваше имя">
+            </label>
+            <br>
+            <label class="discount__label-phone">
+              <input type="tel" name="user-phone" placeholder="Ваш телефон">
+            </label>
+            <br>
+            <button class="discount__btn-send-form common-button" type="submit">Отправить заявку</button>
+          </form>
+          <p class="discount__text-notice">Нажимая «Отправить заявку», вы даете <span>согласие</span> на обработку своих персональных данных</p>
+        </div>
+
+        <div class="discount__pictures-wrapper align-self-end col-md-4 col-lg-4">
+          <picture class="discount__set-of-pictures">
+            <source media="(min-width: 1100px)" data-srcset="../img/08-block.discount_1080px.png">
+            <img class="lazy discount__picture" data-src="../img/08-block.discount_768px.png" alt="Картинка Йогини" draggable="false">
+          </picture>
+        </div>
+
+      </div>
+
+      <block-number-and-button-scroll>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">08</span>
+      </block-number-and-button-scroll>
+      <social-media></social-media>
+
+    </div>
+  </section>
+
+  <!-- Девятый блок -->
+  <footer id="contacts" class="contacts">
+
+    <div class="container-fluid">
+      <div class="map_toggle">
+        <button class="popup-menu-btn ">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="popup-menu-btn__text">Меню</span>
+        </button>
+
+        <lotos-logo-phone></lotos-logo-phone>
+
+        <h2 class="header-title">Контакты</h2>
+
+        <main-nav></main-nav>
+
+        <div class="contacts__wrapper-google-map">
+          <iframe class="contacts__google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.0112808761148!2d30.355339716096747!
+               3d59.931954981873744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a4ed2d7173%3A0x3e6af3e9af92f
+               6e5!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDEwOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTAyNQ!5e0!3m2!1sru!2
+                sru!4v1574225998961!5m2!1sru!2sru" width="365" height="280" style="border:0;" allowfullscreen="">
+          </iframe><!--frameborder="0"-->
+        </div>
+
+        <div class="contacts__pic-and-address-wrapper">
+          <div class="contacts__flex-wrapper-set-of-pic-and-address-info">
+            <picture class="contacts__set-of-pictures">
+              <source media="(min-width: 1530px)" data-srcset="../img/09-block.contacts.map_1080px.jpg">
+              <source media="(min-width: 768px)" data-srcset="../img/09-block.contacts.map_768px.jpg">
+              <img class="lazy contacts__picture" data-src="../img/09-block.contacts.map_375px.jpg" alt="Расположение на карте" draggable="false">
+            </picture>
+
+            <div class="contacts__address-info-wrapper">
+              <p class="contacts__address"><span>Адрес:</span><br>СПб, Невский проспект 108</p>
+              <p class="contacts__address"><span>Email:</span><br>Lotos-yoga@gmail.com</p>
+
+              <button class="contact__button contact__button--show-map">Смотреть на карте</button>
+              <br>
+              <button class="contact__button contact__button--leave-comment">Оставить отзыв</button>
+
+              <p class="contact__copyright">© 2018 — ООО “Центр йоги Лотос”</p>
+
+              <button class="footer__btn-sign-up common-button" type="button">Записаться онлайн</button>
+            </div>
+          </div>
+        </div>
+          <block-number-and-button-scroll>
+            <span ref="block_Number" class="block-number__first-elem align-self-xl-end">09</span>
+          </block-number-and-button-scroll>
+          <social-media></social-media>
+
+
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
+
+<template id="social-media">
+  <ul class="social-media align-items-end">
+    <li class="social-media__item">
+      <a class="social-media__link social-media__link--vkontakte" href="">
+        VK   <span class="visually-hidden">социальная сеть ВКонтакте</span></a>
+    </li>
+    <li class="social-media__item">
+      <a class="social-media__link social-media__link--facebook" href="">
+        FB   <span class="visually-hidden">социальная сеть Фейсбук</span></a>
+    </li>
+    <li class="social-media__item">
+      <a class="social-media__link social-media__link--instagram" href="">
+        INST <span class="visually-hidden">социальная сеть Инстаграм</span>
+      </a>
+    </li>
+  </ul>
+</template>
+
+<template id="block-number-and-button-scroll">
+  <div class="wrapper-block-number-and-button-scroll  d-flex justify-content-between flex-md-row-reverse flex-xl-column">
+    <div class="block-number d-flex flex-column">
+      <slot>
+        <span ref="block_Number" class="block-number__first-elem align-self-xl-end">01</span>
+      </slot>
+      <span class="block-number__second-elem">- 09</span>
+    </div>
+    <button onclick="" class="button-scroll button-scroll--down align-self-center align-self-md-end align-self-xl-end" type="button"></button>
+  </div>
+</template>
+
+<template id="lotos-logo-phone">
+  <div class="d-flex justify-content-end justify-content-md-end  mt-n4 no-gutters">
+    <span class="lotos-logo col-4"> </span>
+    <a class="lotos-phone-number col-4 " href="tel:+78123455697">+7(812)-345-56-97</a>
+  </div>
+</template>
+
+<template id="main-nav">
+  <nav class="main-header__nav main-nav">
+    <button class="main-nav--toggle" type="button"><span class="visually-hidden">Закрыть меню</span> </button>
+
+    <ul class="main-nav__list">
+      <li class="main-nav__item "><a href="#main-header">Главная</a>
+      </li>
+      <li class="main-nav__item "><a href="#yoga-description">Направления</a></li>
+      <li class="main-nav__item "><a href="#our-instructor">Преподаватели</a></li>
+      <li class="main-nav__item "><a href="#yoga-membership">Абонементы</a></li>
+      <li class="main-nav__item "><a href="#schedule">Расписание</a></li>
+      <li class="main-nav__item "><a href="#feedback">Отзывы</a></li>
+      <li class="main-nav__item "><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+</template>
+
+<script type="text/javascript" src="../js/myVue.js"></script>
+<script type="text/javascript" src="../js/source.js"></script>
+
+<script src="../js/lazyload.min.js"></script>
+
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+    });
+
+</script>
+

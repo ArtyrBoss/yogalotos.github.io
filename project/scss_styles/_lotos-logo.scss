@@ -1,0 +1,24 @@
+.lotos-logo {
+  background-image: url("../img/lotos-logo.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 25px;
+  background-position: right;
+  margin-top: -5px;
+}
+
+@media screen and (min-width: $tablet_width) {
+  .lotos-logo {
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_xl_width_for_desktop) {
+  .lotos-logo {
+    display: inline-block;
+    position: absolute ;
+    left: 0;
+    margin-left: 100px;
+    margin-top: 530px;
+  }
+}

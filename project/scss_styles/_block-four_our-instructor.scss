@@ -1,0 +1,145 @@
+.our-instructor__name {
+  font-size: 36px;
+  line-height: 36px;
+}
+.our-instructor__wrapper-experience {
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+
+.our-instructor__experience:nth-child(1) {
+  font-size: 18px;
+  line-height: 36px;
+
+  margin-top: 5px;
+}
+
+.our-instructor__btn-sign-up {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: $tablet_width) {
+  .our-instructor__wrapper-experience {
+    margin-bottom: 110px;
+  }
+
+  .our-instructor__name {
+    margin-top: 20px;
+  }
+
+  .our-instructor__set-of-pictures {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .our-instructor__teacher-list {
+    display: none;
+  }
+
+  .our-instructor__experience:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .our-instructor__wrapper {
+    margin-top: 90px;
+  }
+
+  .our-instructor__name {
+    font-size: 48px;
+    margin-left: 0;
+  }
+
+  .our-instructor__experience {
+    max-width: 420px;
+  }
+
+  .our-instructor__experience:nth-child(1) {
+    font-size: 24px;
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .our-instructor__experience:nth-child(3) {
+    margin-top: 10px;
+  }
+
+  .our-instructor__btn-sign-up {
+    margin-top: 30px;
+  }
+
+  .our-instructor__teacher-title {
+    color: #f97a85;
+    font-weight: bold;
+    margin-left: -85px;
+  }
+
+  .our-instructor__teacher-list {
+    font-size: 18px;
+    min-width: 200px;
+
+    padding-left: 40px;
+    padding-right: 5px;
+    margin-bottom: 40px;
+  }
+
+  .our-instructor__teacher-item {
+    margin-top: 13px;
+    margin-left: -5px;
+
+    &:hover:before {
+      font-weight: bold;
+      content: "Trainer \2013";
+
+      left: -45px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet_width) and (max-width: 900px){
+  .our-instructor__wrapper {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: $tablet_width) and (max-width: $changed_bootstrap_lg_width){
+  .our-instructor__picture {
+    margin-left: -25px;
+  }
+}
+
+@media screen and (max-width: $changed_bootstrap_lg_width) {
+  .our-instructor__teacher-list {
+    margin-top: 30px;
+  }
+
+}
+@media screen and (min-width: $changed_bootstrap_lg_width) and (max-width: 1700px){
+  .our-instructor__yoga-teacher-and-pic-wrapper {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_lg_width) {
+  .our-instructor__wrapper {
+    margin-top: 140px;
+  }
+
+  .our-instructor__picture {
+    margin-top: -100px;
+  }
+
+  .our-instructor__wrapper-experience {
+    margin-left: 70px;
+  }
+
+  .our-instructor__experience {
+    max-width: 465px;
+  }
+
+  .our-instructor__experience:not(:first-child) {
+    font-size: 18px;
+  }
+}

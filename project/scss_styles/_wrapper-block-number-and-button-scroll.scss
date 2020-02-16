@@ -1,0 +1,105 @@
+.block-number__first-elem {
+  font-size: 30px;
+
+  background: linear-gradient(90deg, rgba(247,142,106,1) 0%, rgba(249,122,133,1) 50%, rgba(252,102,162,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.block-number__second-elem {
+  font-size: 14px;
+
+  background: linear-gradient(90deg, rgba(247,142,106,1) 0%, rgba(249,122,133,1) 50%, rgba(252,102,162,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-scroll {
+  color: #fbf5f4;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-scroll--down {
+  background-image: url("../img/button_scroll.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+
+  margin-top: 10px;
+}
+
+.wrapper-block-number-and-button-scroll {
+  position: absolute ;
+  width: 100%;
+  bottom: 0;
+
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: $tablet_width) {
+  .wrapper-block-number-and-button-scroll {
+    margin-bottom: 20px;
+  }
+  .block-number {
+    padding-left: 55px;
+    transform: translateY(10px);
+  }
+
+  .button-scroll--down {
+    transform: translate(-55px, 10px);
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .wrapper-block-number-and-button-scroll {
+    padding-bottom: 17px;
+  }
+
+  .block-number__first-elem {
+    font-size: 72px;
+    line-height: 24px;
+
+    padding-top: 30px;
+    margin-right: -5px;
+    margin-bottom: 20px;
+
+    width: 95px;
+    height: 72px;
+  }
+
+  .block-number__second-elem {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .block-number {
+    font-weight: lighter;
+    text-align: end;
+  }
+
+  .button-scroll--down {
+    margin-bottom: -10px;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_xl_width_for_desktop) {
+  .wrapper-block-number-and-button-scroll {
+    width: 200px;
+    right: 0;
+    margin-right: 90px;
+    top: 540px;
+  }
+
+  .button-scroll--down {
+    margin-top: 350px;
+  }
+}
+
+@media screen and (max-width: $changed_bootstrap_xl_width_for_desktop) {
+  .block-number {
+    transform: translate(-55px, 10px);
+  }
+}

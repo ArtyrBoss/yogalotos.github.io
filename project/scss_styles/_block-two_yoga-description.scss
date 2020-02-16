@@ -1,0 +1,120 @@
+.yoga-description__main-first-half-title {
+  font-size: 48px;
+  line-height: 36px;
+  height: 50px;
+
+  background: linear-gradient(180deg, rgba(247,142,106,1) 0%, rgba(249,122,133,1) 50%, rgba(252,102,162,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(247,142,106,1) 0%, rgba(249,122,133,1) 50%, rgba(252,102,162,1) 100%);
+    width: 35px;
+    height: 4px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+.yoga-description__main-title-wrapper {
+  margin-top: 115px;
+}
+
+.yoga-description__main-second-half-title {
+  font-size: 18px;
+  line-height: 36px;
+
+  margin-top: 10px;
+}
+
+.yoga-description__first-half-title {
+  display: block;
+}
+
+.yoga-description__text {
+  margin-top: 35px;
+}
+
+.yoga-description__our-offer {
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.yoga-description__text, .yoga-description__our-offer {
+  max-width: 580px;
+}
+
+.yoga-description__btn-sign-up {
+  margin-top: 20px;
+}
+
+.yoga-description__yoga-type {
+  margin-top: 110px;
+  min-width: 200px;
+
+  margin-right: -40px;
+}
+
+.yoga-description__yoga-item {
+  font-size: 18px;
+  color: #979392 ;
+  margin-bottom: 0;
+  padding-top: 10px;
+
+  &:hover:before {
+    content: "Yoga \2013";
+    left: -70px;
+  }
+}
+
+.yoga-description__set-of-pictures {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: $tablet_width) {
+  .yoga-description__title-yoga-type-pic-wrapper {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: $tablet_width) and (max-width: 900px){
+  .yoga-description__all-info-wrapper {
+    justify-content: space-between;
+  }
+  .yoga-description__yoga-type {
+    margin-left: 20px;
+  }
+}
+
+
+@media screen and (min-width: $changed_bootstrap_lg_width) {
+  .yoga-description__title-text-offer-wrapper, .yoga-description__title-yoga-type-pic-wrapper {
+    margin-top: 60px;
+  }
+
+  .yoga-description__title-text-offer-wrapper {
+    margin-left: 90px;
+  }
+
+  .yoga-description__yoga-type {
+    margin-left: 30px;
+  }
+
+  .yoga-description__set-of-pictures {
+    margin-top: -40px;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_xl_width_for_desktop) {
+  .yoga-description__yoga-type {
+    margin-left: 120px;
+  }
+
+  .yoga-description__picture {
+    margin-right: -20px;
+  }
+}

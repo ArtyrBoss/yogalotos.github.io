@@ -1,0 +1,14 @@
+.lotos-phone-number {
+  display: none;
+}
+
+@media screen and (min-width: $tablet_width) {
+  .lotos-phone-number {
+    display: inline-block;
+    font-size: 18px;
+    text-align: end;
+
+    margin-top: -5px;
+  }
+}
+

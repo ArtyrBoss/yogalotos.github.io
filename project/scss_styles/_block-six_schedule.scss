@@ -1,0 +1,75 @@
+.schedule__table-of-all-info {
+  margin-top: 40px;
+}
+
+.schedule__period {
+  display: flex;
+}
+
+.schedule__data, .schedule__day, .schedule__time, .schedule__downland-schedule{
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+
+  width: 200px;
+  height: 75px;
+
+  margin-top: 3px;
+  margin-right: 3px;
+
+  background-color: #ffffff;
+  border: 5px solid transparent;
+}
+
+.schedule__data {
+  transition-duration: 0.3s;
+}
+
+.schedule__data:hover, .schedule__data:focus, .schedule__data:active {
+  z-index: 1;
+  transform: translateY(-5px);
+  box-shadow: 1px 0 2px 1px #FFE500,
+  -1px 0px 1px 1px #FF0000;
+}
+.schedule__data:hover:before, .schedule__data:focus:before, .schedule__data:active:before {
+  opacity: 1;
+  transform: translateY(6px);
+}
+
+.schedule__downland-schedule, .schedule__day, .schedule__time {
+  color: #f78e6a;
+}
+
+.schedule__time {
+  font-size: 12px;
+}
+
+.schedule__downland-schedule {
+  position: relative;
+  color: #000000;
+  line-height: 15px;
+  text-align: start;
+  right: 0;
+  padding-left: 80px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/07-block.schedule_dowland-btn.png");
+    width: 30px;
+    height: 30px;
+    left: 30px;
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .schedule__table-of-all-info {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_xl_width_for_desktop) {
+  .schedule__table-of-all-info {
+    margin-left: 220px;
+  }
+}

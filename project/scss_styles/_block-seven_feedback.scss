@@ -1,0 +1,166 @@
+.user-info {
+  margin-top: 70px;
+}
+
+.user-info__photo {
+  display: block;
+}
+
+.user-info__name {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 40px;
+
+  margin-top: 20px;
+  margin-bottom: 3px;
+}
+
+.user-info__age {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.user-info__comment-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.user-info__user-comment {
+  height: 95px;
+  max-width: 535px;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.user-info__btn-show-full-comment {
+  color: #f97a85;
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + .user-info__user-comment {
+  height: auto;
+}
+
+.feedback__btn-sign-up {
+  margin-top: 35px;
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: $tablet_width) {
+  .user-info__picture {
+    display: none;
+  }
+
+  .user-info__user-comment-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .feedback__user-info {
+    display: inline-block;
+    z-index: 1;
+   //margin-left: 200px;
+   // padding-left: 160px;
+  }
+
+  .user-info__wrapper-name-age {
+    margin-top: 70px;
+    margin-left: 25px;
+  }
+
+  .user-info__name {
+    margin-bottom: 10px;
+  }
+
+  .user-info__btn-show-full-comment {
+    display: none;
+  }
+
+  .user-info__user-comment {
+    max-width: 472px;
+    overflow: visible;
+
+    margin-top: 25px;
+  }
+
+  .feedback__btn-sign-up {
+    margin-top: 240px;
+  }
+
+  .user-info__user-comment-list {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 170px;
+
+    margin-top: 70px;
+  }
+
+  .user-info__user-comment-item {
+    color: #a9a6a5;
+    cursor: pointer;
+
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #000000;
+    }
+
+    &:hover:before {
+      content: "Client \2013";
+      position: absolute;
+      left: -75px;
+      color: #f97a85;
+    }
+  }
+
+  .user-info__picture {
+    margin-top: -300px;
+    margin-left: 180px;
+
+    z-index: 0;
+    opacity: 0.9;
+  }
+}
+
+@media screen and (min-width: $changed_bootstrap_lg_width) {
+  .feedback__wrapper {
+    margin-top: 80px;
+  }
+
+  .feedback__user-info {
+    margin-left: -70px;
+  }
+
+  .user-info__wrapper-name-age {
+    margin-top: 90px;
+  }
+
+  .user-info__photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .user-info__user-comment {
+    margin-top: 35px;
+  }
+
+  .user-info__user-comment-list {
+    margin-left: 130px;
+    z-index: 1;
+  }
+
+  .user-info__picture {
+    max-width: 770px;
+
+    margin-top: 0;
+    margin-left: -290px;
+  }
+}

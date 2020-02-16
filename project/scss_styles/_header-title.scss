@@ -1,0 +1,15 @@
+.header-title {
+  display: none;
+}
+
+@media screen and (min-width: $changed_bootstrap_xl_width_for_desktop) {
+  .header-title {
+    display: inline-block;
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    top: 47px;
+    margin-left: -60px;
+  }
+}
+
