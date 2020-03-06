@@ -127,7 +127,7 @@ request.onload = function() {
 
 function ShowMenu() {
     for (let mainNavItems = 0; mainNavItems < mainNav.length; mainNavItems++) {
-        mainNav[mainNavItems].style.display = 'inline-block';
+        mainNav[mainNavItems].style.visibility = 'visible';
 
         if (screenWidth <= 599) {
             document.body.style.overflow = 'hidden';
@@ -141,7 +141,7 @@ function ShowMenu() {
 
 function CloseMenu() {
     for (let mainNavItems = 0; mainNavItems < mainNav.length; mainNavItems++) {
-        mainNav[mainNavItems].style.display = 'none';
+        mainNav[mainNavItems].style.visibility = 'hidden';
 
         if (screenWidth <= 599) {
             document.body.style.overflowY = 'auto';
