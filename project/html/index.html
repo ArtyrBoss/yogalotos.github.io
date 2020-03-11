@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -23,14 +23,12 @@
 
     <div class="container-fluid">
 
-      <button class="main-nav__popup-btn popup-menu-btn">
+        <button class="main-nav__popup-btn popup-menu-btn">
         <span class="visually-hidden">Открыть меню</span>
         <span class="popup-menu-btn__text">Меню</span>
-      </button>
+        </button>
 
       <lotos-logo-phone></lotos-logo-phone>
-
-
 
       <h2 class="header-title">Добро пожаловать</h2>
 
@@ -39,7 +37,7 @@
       <h1 class="visually-hidden">Центр йоги Lotos</h1>
 
       <div class="d-flex flex-column align-items-center flex-md-row-reverse mr-md-n4 flex-lg-row align-items-lg-start">
-        <picture class="main-header__pictures">
+        <picture class="main-header__pictures" >
           <source media="(min-width: 1530px)" data-srcset="../img/01-block.main-header_1080px.png">
           <source media="(min-width: 768px)" data-srcset="../img/01-block.main-header_768px.png">
           <img class="lazy main-header__picture mt-lg-n1" data-src="../img/01-block.main-header_375px.png" alt="Картинка Йогини" draggable="false">
@@ -463,7 +461,7 @@
 
         <picture class="user-info__set-of-pictures col-lg-4">
           <source media="(min-width: 1530px)" data-srcset="../img/07-block.feedback_1080px.png">
-          <img class="lazy user-info__picture" data-src="../img/07-block.feedback_768px.png" alt="Фото преподавателя йоги" draggable="false">
+          <img class="lazy user-info__picture" data-src="../img/07-block.feedback_768px.png" alt="Фото задний фон" draggable="false">
         </picture>
 
       </div>
@@ -629,7 +627,7 @@
 </template>
 
 <template id="main-nav">
-  <nav class="main-header__nav main-nav">
+  <nav id="nav" class="main-header__nav main-nav">
     <button class="main-nav--toggle" type="button"><span class="visually-hidden">Закрыть меню</span> </button>
 
     <ul class="main-nav__list">
@@ -656,4 +654,3 @@
     });
 
 </script>
-

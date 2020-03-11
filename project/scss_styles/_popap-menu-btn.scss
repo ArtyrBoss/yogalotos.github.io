@@ -1,0 +1,40 @@
+.popup-menu-btn {
+  content: "";
+  position: relative;
+  color: #fbf5f4;
+
+  width: 24px;
+  height: 16px;
+
+  padding-bottom: 4px;
+  margin-top: 5px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/burger.svg");
+}
+
+.popup-menu-btn__text {
+  display: none;
+}
+
+@media screen and (max-width: 599px) {
+  .popup-menu-btn {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: $tablet_width) {
+  .popup-menu-btn {
+    margin-top: 10px;
+  }
+
+  .popup-menu-btn__text {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: -7px;
+  }
+}
